@@ -52,7 +52,7 @@ export default function LiveMagneticNumber({ baseValue, label, prefix = '', suff
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="flex flex-col items-center justify-center p-8 rounded-3xl cursor-default"
+      className="flex flex-col items-center justify-center p-4 lg:p-2 xl:p-8 rounded-3xl cursor-default"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -62,12 +62,12 @@ export default function LiveMagneticNumber({ baseValue, label, prefix = '', suff
       }}
     >
       <div style={{ transform: "translateZ(50px)" }} className="flex flex-col items-center">
-        <h3 className="text-6xl md:text-8xl font-black text-slate-900 mb-2 font-mono tracking-tight flex items-baseline">
+        <h3 className="text-6xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-black text-slate-900 mb-2 font-mono tracking-tight flex items-baseline">
           {prefix}{formattedInt}
-          <span className="text-2xl md:text-4xl text-green-500 font-mono opacity-80">{decPart}</span>
-          <span className="text-green-500 text-4xl md:text-6xl ml-1">{suffix}</span>
+          <span className="text-2xl lg:text-xl xl:text-2xl text-green-500 font-mono opacity-80">{decPart}</span>
+          <span className="text-green-500 text-4xl lg:text-3xl xl:text-4xl ml-1">{suffix}</span>
         </h3>
-        <p style={{ transform: "translateZ(30px)" }} className="text-sm md:text-base font-bold text-slate-500 uppercase tracking-[0.2em] text-center mt-2">
+        <p style={{ transform: "translateZ(30px)" }} className="text-sm lg:text-[11px] xl:text-xs 2xl:text-sm font-bold text-slate-500 uppercase tracking-[0.1em] xl:tracking-[0.2em] text-center mt-2">
           {label}
         </p>
       </div>

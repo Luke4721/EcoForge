@@ -21,7 +21,7 @@ export default function AbstractConstruct({ type }: { type: string }) {
     }
   };
 
-  if (type === 'ewaste') {
+  if (type === 'hardware' || type === 'tech') {
     return (
       <motion.div variants={container} initial="hidden" animate="show" className="relative w-full h-full flex items-center justify-center pointer-events-none">
         <motion.div animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} className="absolute text-green-200/50">
@@ -30,7 +30,7 @@ export default function AbstractConstruct({ type }: { type: string }) {
         <motion.div variants={float} animate={{ y: [-10, 10, -10] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute z-10 text-emerald-500 drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]">
           <Cpu size={100} strokeWidth={1.5} />
         </motion.div>
-        <motion.div variants={float} className="absolute -bottom-10 -right-10 text-teal-400">
+        <motion.div variants={float} className="absolute top-8 right-8 text-teal-400 opacity-60">
           <HardDrive size={80} strokeWidth={1.5} />
         </motion.div>
       </motion.div>
@@ -46,7 +46,7 @@ export default function AbstractConstruct({ type }: { type: string }) {
         <motion.div variants={float} animate={{ y: [-15, 15, -15] }} transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} className="absolute z-10 text-blue-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
           <Battery size={110} strokeWidth={1.5} />
         </motion.div>
-        <motion.div variants={float} className="absolute -top-10 -left-5 text-indigo-400">
+        <motion.div variants={float} className="absolute top-8 left-8 text-indigo-400 opacity-60">
           <BatteryCharging size={60} strokeWidth={2} />
         </motion.div>
       </motion.div>
@@ -62,7 +62,7 @@ export default function AbstractConstruct({ type }: { type: string }) {
         <motion.div variants={float} animate={{ y: [-10, 10, -10] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} className="absolute z-10 text-teal-500 drop-shadow-[0_0_15px_rgba(20,184,166,0.5)]">
           <Droplets size={100} strokeWidth={1.5} />
         </motion.div>
-        <motion.div variants={float} className="absolute -bottom-5 -left-10 text-green-400">
+        <motion.div variants={float} className="absolute top-8 left-8 text-green-400 opacity-60">
           <Leaf size={70} strokeWidth={1.5} />
         </motion.div>
       </motion.div>
@@ -78,7 +78,7 @@ export default function AbstractConstruct({ type }: { type: string }) {
       <motion.div variants={float} animate={{ y: [-12, 12, -12] }} transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }} className="absolute z-10 text-amber-500 drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]">
         <Factory size={100} strokeWidth={1.5} />
       </motion.div>
-      <motion.div variants={float} className="absolute -top-10 -right-5 text-yellow-500">
+      <motion.div variants={float} className="absolute top-8 right-8 text-yellow-500 opacity-60">
         <Boxes size={65} strokeWidth={1.5} />
       </motion.div>
     </motion.div>

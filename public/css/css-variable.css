@@ -1,0 +1,16 @@
+body{
+	--e-global-color-primary					: #0E1714;
+	--e-global-color-secondary					: #FAFAFA;
+	--e-global-color-text						: #494B46;
+	--e-global-color-accent						: #A9DE59;
+	--e-global-color-accentsecondary			: transparent;
+	--e-global-color-white						: #FFFFFF;
+	--e-global-color-black						: #000000;
+	--e-global-color-divider					: #0E17141A;
+	--e-global-color-darkdivider				: #163300A6;
+	--e-global-color-background             	: #FFFFFF1A;
+	--e-global-typography-primary-font-family	: "Rajdhani", sans-serif;
+	--e-global-typography-secondary-font-family	: "Rajdhani", sans-serif;
+	--e-global-typography-text-font-family		: "DM Sans", sans-serif;
+	--e-global-typography-accent-font-family    : "Rajdhani", sans-serif;
+}

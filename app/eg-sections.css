@@ -1,0 +1,135 @@
+/* HERO DETAIL IMAGE - MASK OVERRIDE ------------------------------------------
+   The theme masks this image with a shape file on the vendor's demo server:
+     .elementor-25 .elementor-element.elementor-element-5a95678.elementor-widget-image img
+       { -webkit-mask-image: url(/...); }
+   That URL doesn't resolve from our domain, so the mask clips the image away
+   and the slot looks empty even though DevTools shows the file fetched fine.
+   The selector below mirrors theirs so specificity matches, then wins on
+   !important. Sizing is left alone - forcing width/height collapsed it inside
+   the flex parent. Delete once the theme's shape assets are hosted locally. */
+.elementor-25 .elementor-element.elementor-element-5a95678.elementor-widget-image img,
+.elementor-25 .elementor-element.hero-detail-image.elementor-widget-image img,
+.hero-detail-image img{
+  -webkit-mask-image:none !important;    mask-image:none !important;
+  -webkit-mask-size:auto !important;     mask-size:auto !important;
+  -webkit-mask-repeat:repeat !important; mask-repeat:repeat !important;
+  -webkit-mask-position:0 0 !important;  mask-position:0 0 !important;
+  border-radius:18px; display:block; max-width:100%; height:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+.eg-wrap{max-width:1200px;margin:0 auto;padding:0 20px;}
+.eg-eyebrow{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:14px;color:#00b140;margin:0 0 14px;}
+.eg-h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(30px,4vw,46px);line-height:1.1;color:#1a1a1a;margin:0 0 16px;}
+.eg-lede{font-size:17px;line-height:1.7;color:#5b6360;max-width:720px;margin:0;}
+
+/* 1. IMPACT BAND — full-bleed dark spine right under the hero.
+   Figures are DOM text under a WebGL stage; the stage is exactly four columns
+   wide so every stack rises over the centre of its own figure. */
+.eg-impact{position:relative;z-index:1;background:#1a1a1a;margin:96px 0 0;padding:88px 0 78px;border-radius:56px 56px 0 0;overflow:hidden;}
+.eg-impact .eg-wrap{position:relative;z-index:1;}
+.eg-impact .eg-eyebrow{color:#00b140;}
+.eg-impact-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px 40px;flex-wrap:wrap;margin:0 0 12px;}
+.eg-impact-h{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(26px,3.2vw,38px);color:#fff;margin:0;}
+.eg-impact-note{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:.13em;text-transform:uppercase;
+  line-height:1.6;color:rgba(255,255,255,.4);max-width:330px;margin:0 0 6px;}
+.eg-chart{display:grid;grid-template-columns:repeat(4,1fr);}
+.eg-chart-stage{grid-column:1/-1;position:relative;height:clamp(196px,21vw,306px);}
+.eg-chart-canvas{position:absolute;inset:0;}
+.eg-chart-canvas canvas{display:block;}
+/* blends the stage rectangle into the band so the scene has no visible box */
+.eg-chart-canvas::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(118% 76% at 50% 60%,rgba(26,26,26,0) 40%,rgba(26,26,26,.9) 100%);}
+.eg-chart-zones{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);}
+.eg-zone{display:block;}
+.eg-stat{padding:15px 20px 0;border-top:1px solid rgba(255,255,255,.13);transition:border-color .3s ease;}
+.eg-stat.is-active{border-top-color:#00b140;}
+.eg-stat-idx{display:block;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:11px;letter-spacing:.22em;color:rgba(255,255,255,.32);margin:0 0 12px;}
+.eg-num{font-variant-numeric:tabular-nums;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(34px,4.4vw,54px);line-height:1;color:#fff;display:block;transition:opacity .55s ease;}
+.eg-num span{color:#00b140;font-size:.5em;margin-left:6px;}
+.eg-impact[data-phase="armed"] .eg-num{opacity:0;}
+.eg-stat-label{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:15px;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.66);margin:9px 0 0;transition:color .3s ease;}
+.eg-stat.is-active .eg-stat-label{color:#fff;}
+.eg-stat-unit{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.38);margin:7px 0 0;}
+.eg-stat-unit i{flex:0 0 9px;width:9px;height:9px;background:#3c423e;box-shadow:inset -2px -2px 0 rgba(0,0,0,.45);}
+.eg-metals{margin-top:46px;padding-top:26px;border-top:1px solid rgba(255,255,255,.14);font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#cfd6d3;font-size:15px;}
+.eg-metals b{color:#00b140;font-weight:700;}
+@media (prefers-reduced-motion:reduce){.eg-num{transition:none;}}
+/* Four columns is the point of the chart, so below the fold the type shrinks
+   rather than the grid reflowing and taking the stacks off their figures. */
+@media (max-width:760px){
+  .eg-chart-stage{height:clamp(178px,46vw,240px);}
+  .eg-stat{min-width:0;padding:12px 9px 0;}
+  .eg-stat-idx{font-size:10px;letter-spacing:.16em;margin-bottom:8px;}
+  .eg-num{font-size:clamp(26px,7.2vw,34px);}
+  .eg-num span{margin-left:3px;}
+  .eg-stat-label{font-size:11.5px;letter-spacing:.06em;overflow-wrap:anywhere;}
+  .eg-stat-unit{font-size:9.5px;letter-spacing:.03em;gap:6px;overflow-wrap:anywhere;}
+  .eg-stat-unit i{flex:0 0 7px;width:7px;height:7px;}
+  .eg-unit-prefix{display:none;}
+}
+
+/* 2. PARTNER MARQUEE — echoes the ticker the site already uses */
+.eg-partners{background:#f6f8f7;position:relative;z-index:1;padding:64px 0 70px;overflow:hidden;}
+.eg-partners .eg-wrap{text-align:center;}
+.eg-marquee{margin-top:38px;position:relative;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);}
+.eg-track{display:flex;width:max-content;animation:eg-scroll 38s linear infinite;}
+.eg-partners:hover .eg-track{animation-play-state:paused;}
+@keyframes eg-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.eg-logo{flex:0 0 auto;width:190px;height:76px;display:flex;align-items:center;justify-content:center;padding:0 18px;}
+.eg-logo--wide{width:240px;}\n.eg-logo--tall img{max-height:58px;}
+.eg-logo img{max-height:40px;max-width:100%;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:.6;transition:filter .3s,opacity .3s;}
+.eg-logo:hover img{filter:none;opacity:1;}
+@media (prefers-reduced-motion:reduce){.eg-track{animation:none;}}
+
+/* 3. PORTFOLIO COMPLETION — two remaining services, matching the services grid */
+.eg-portfolio{background:#fff;padding:0 0 90px;}
+.eg-grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:34px;}
+.eg-card{display:block;text-decoration:none;background:#fff;border:1px solid #e4e9e7;border-radius:18px;padding:38px 34px;transition:border-color .3s,transform .3s,box-shadow .3s;}
+.eg-card:hover{border-color:#00b140;transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(0,0,0,.35);}
+.eg-card h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:26px;color:#1a1a1a;margin:18px 0 10px;}
+.eg-card p{font-size:15px;line-height:1.7;color:#5b6360;margin:0 0 18px;}
+.eg-card .eg-more{font-family:'Rajdhani',sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;color:#00b140;}
+.eg-ico{width:46px;height:46px;color:#00b140;}
+
+/* 4. CERTIFICATIONS — green top-rule echoes the facility cards elsewhere on site */
+.eg-certs{background:#f6f8f7;padding:90px 0;}
+.eg-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:38px;}
+.eg-cert{background:#fff;border-radius:18px;padding:38px 32px;border-top:4px solid #00b140;box-shadow:0 12px 30px -24px rgba(0,0,0,.4);}
+.eg-cert h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:24px;color:#1a1a1a;margin:0 0 12px;}
+.eg-cert p{font-size:15px;line-height:1.7;color:#5b6360;margin:0;}
+
+/* 5. FAQ — native details/summary, no JS */
+.eg-faq{background:#fff;padding:90px 0;}
+.eg-q{border-bottom:1px solid #e4e9e7;}
+.eg-q summary{list-style:none;cursor:pointer;padding:26px 44px 26px 0;position:relative;
+  font-family:'Rajdhani',sans-serif;font-weight:700;font-size:20px;color:#1a1a1a;}
+.eg-q summary::-webkit-details-marker{display:none;}
+.eg-q summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  font-size:26px;font-weight:400;color:#00b140;transition:transform .25s;}
+.eg-q[open] summary::after{content:"\\2212";}
+.eg-q summary:focus-visible{outline:2px solid #00b140;outline-offset:4px;}
+.eg-q p{margin:0 0 26px;padding-right:44px;font-size:16px;line-height:1.8;color:#5b6360;}
+.eg-faq-quote{margin-top:56px;background:#1a1a1a;border-radius:20px;padding:44px 40px;display:flex;
+  align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+.eg-faq-quote p{margin:0;font-family:'Rajdhani',sans-serif;font-weight:600;font-size:22px;line-height:1.5;color:#fff;max-width:640px;}
+.eg-btn{display:inline-block;background:#00b140;color:#fff;text-decoration:none;font-family:'Rajdhani',sans-serif;
+  font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:14px;padding:15px 30px;border-radius:30px;white-space:nowrap;}
+.eg-btn:hover{background:#00c94a;color:#fff;}
+
+@media (max-width:1024px){.eg-grid4{grid-template-columns:repeat(2,1fr);row-gap:38px}
+  .eg-grid3{grid-template-columns:1fr}.eg-grid2{grid-template-columns:1fr}}
+@media (max-width:640px){.eg-grid4{grid-template-columns:1fr}}
