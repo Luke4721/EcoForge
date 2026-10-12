@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — EcoForge</title>
+<meta name="description" content="Request a quote from EcoForge for e-waste management, data destruction or EPR compliance.">
+<link rel="icon" href="assets/favicon.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="leafGrad" x1="0" y1="1" x2="1" y2="0">
+<stop offset="0" stop-color="#3E9B4F"/><stop offset="1" stop-color="#8FD35B"/>
+</linearGradient>
+</defs></svg>
+
+<nav id="egDock" class="egdock hide" aria-label="Eco Forge primary">
+  <a class="eg-item eg-mark" href="index.html" aria-label="Eco Forge — home">
+    <!-- TODO: REPLACE LOGO --><img src="assets/logo-mark.png" alt="" width="22" height="16">
+  </a>
+  <a class="eg-item" href="business-solutions.html">
+    <span class="g"><svg viewBox="0 0 16 16"><path d="M4 2.4h5.3L12 5.1v8.5H4z"/><path d="M9.2 2.4V5h2.7"/><path d="M6 8.4h4M6 10.8h2.8"/></svg></span>
+    <span class="l">Business solutions</span></a>
+  <a class="eg-item" href="sustainability.html">
+    <span class="g"><svg viewBox="0 0 16 16"><path d="M8 14V9"/><path d="M8 9c0-2.4 1.7-4.3 4-4.3.2 2.6-1.6 4.6-4 4.3Z"/><path d="M8 10.5C7.9 8.4 6.4 6.8 4.4 6.8 4.3 8.9 5.9 10.6 8 10.5Z"/></svg></span>
+    <span class="l">Sustainability</span></a>
+  <a class="eg-item" href="about-us.html">
+    <span class="g"><svg viewBox="0 0 16 16"><path d="M1.6 12.4c2.4-3.4 4.3-5.1 5.7-5.1 2 0 3 3.6 5 3.6 1.1 0 1.9-.5 2.4-1.4"/><path d="M4.3 6.2C5.5 4.4 6.6 3.5 7.6 3.5c1.5 0 2.2 2.4 3.7 2.4"/></svg></span>
+    <span class="l">About us</span></a>
+  <a class="eg-item" href="careers.html">
+    <span class="g"><svg viewBox="0 0 16 16"><circle cx="8" cy="5.4" r="2.4"/><path d="M2.8 13.6c.6-3 2.6-4.6 5.2-4.6s4.6 1.6 5.2 4.6"/></svg></span>
+    <span class="l">Careers</span></a>
+  <a class="eg-item eg-enter on" href="contact.html">
+    <span class="g"><svg viewBox="0 0 16 16"><path d="M6.6 2.5h5.1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6.6"/><path d="M2.6 8h6.6"/><path d="m7 5.6 2.4 2.4L7 10.4"/></svg></span>
+    <span class="l">Request quote</span></a>
+</nav>
+
+<main>
+<section class="pg-hero">
+  <p class="pg-eyebrow"><span class="dot"></span>Get in touch</p>
+  <h1 class="pg-title" style="max-width:14ch">Start your green transition.</h1>
+  <p class="pg-lede">Tell us about your organization&rsquo;s e-waste, data destruction or EPR compliance needs, and our team will get back to you with a tailored quote.</p>
+  <svg class="pg-leaf" style="width:120px;right:-2%;top:4%;transform:rotate(32deg)" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21C3 10 10 3 21 3c0 11-7 18-18 18Z" fill="url(#leafGrad)"/><path d="M3 21C7 15 13 9 21 3" stroke="rgba(255,255,255,.45)" stroke-width=".7" fill="none"/></svg>
+  <svg class="pg-leaf" style="width:54px;left:-1%;bottom:6%;transform:rotate(-136deg);opacity:.9" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21C3 10 10 3 21 3c0 11-7 18-18 18Z" fill="url(#leafGrad)"/></svg>
+</section>
+
+<section class="pg-section" style="padding-top:1.5rem">
+  <div class="rq-card reveal">
+    <p class="rq-kicker">Get a quote</p>
+    <h2 class="rq-title">What services are you looking for?</h2>
+    <ul class="rq-checks">
+      <li>Response within 24 hours</li>
+      <li>Pan-India reverse logistics</li>
+      <li>100% data security</li>
+    </ul>
+
+    <div class="rq-icons" id="rqIcons">
+      <button type="button" data-sol="e-waste" class="on"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.6"/><path d="M8 20h8"/><path d="M12 16v4"/></svg></span>E-Waste</button>
+      <button type="button" data-sol="battery"><span class="ic"><svg viewBox="0 0 24 24"><rect x="8" y="5" width="8" height="16" rx="1.6"/><path d="M10.5 3h3"/><path d="M12 10v6"/><path d="M9.6 12.5h4.8"/></svg></span>Battery</button>
+      <button type="button" data-sol="plastic"><span class="ic"><svg viewBox="0 0 24 24"><path d="M10 3h4l-.7 4.5a3.5 3.5 0 0 0 0 1L14 13h-4l.7-4.5a3.5 3.5 0 0 0 0-1Z"/><path d="M9 13h6l1 8H8Z"/></svg></span>Plastic</button>
+      <button type="button" data-sol="paper"><span class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6Z"/><path d="M15 3v4h4"/><path d="M9.5 12h6M9.5 16h6"/></svg></span>Paper</button>
+      <button type="button" data-sol="green-metal"><span class="ic"><svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5Z"/><path d="m4.5 12.6 7.5 4.2 7.5-4.2"/><path d="m4.5 16.6 7.5 4.2 7.5-4.2"/></svg></span>Metals</button>
+      <button type="button" data-sol="epr"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c4 3 6 6 6 9a6 6 0 0 1-12 0c0-3 2-6 6-9Z"/><path d="m9.2 12.2 2 2 3.6-4"/></svg></span>EPR</button>
+    </div>
+
+    <hr class="rq-hr">
+
+    <form id="quoteForm" novalidate>
+      <p class="rq-sub">Your information</p>
+      <div class="rq-form">
+        <div class="rq-field">
+          <label for="rq-name">Full name</label>
+          <input id="rq-name" name="name" type="text" placeholder="Full name" autocomplete="name">
+        </div>
+        <div class="rq-field">
+          <label for="rq-phone">Phone</label>
+          <input id="rq-phone" name="phone" type="tel" placeholder="Phone number" autocomplete="tel">
+        </div>
+        <div class="rq-field">
+          <label for="rq-email">Email</label>
+          <input id="rq-email" name="email" type="email" placeholder="Email address" autocomplete="email">
+        </div>
+
+        <div class="rq-field">
+          <label for="rq-company">Company name</label>
+          <input id="rq-company" name="company" type="text" placeholder="Company name" autocomplete="organization">
+        </div>
+        <div class="rq-field span2">
+          <label for="rq-volume">Estimated volume (monthly)</label>
+          <div class="rq-qty">
+            <input id="rq-volume" name="volume" type="text" placeholder="Qty">
+            <select id="rq-unit" name="unit" aria-label="Volume unit">
+              <option value="kg" selected>Kilograms (KG)</option>
+              <option value="mt">Metric Tons (MT)</option>
+              <option value="units">Individual Units</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="rq-field">
+          <label for="rq-solution">Solutions looking for *</label>
+          <select id="rq-solution" name="solution" required>
+            <option value="e-waste" selected>E-Waste Solutions</option>
+            <option value="paper">Paper Solution</option>
+            <option value="green-metal">Green Metal &amp; Metal Recovery Solutions</option>
+            <option value="epr">EPR Consulting</option>
+            <option value="plastic">Plastic Waste Solutions</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+        <div class="rq-field">
+          <label for="rq-query">Query *</label>
+          <textarea id="rq-query" name="query" placeholder="Tell us about your requirement" required></textarea>
+        </div>
+
+        <div class="rq-field span2">
+          <label>Pickup frequency</label>
+          <div class="rq-radios">
+            <label class="rq-radio"><input type="radio" name="frequency" value="One-time" checked>One-time</label>
+            <label class="rq-radio"><input type="radio" name="frequency" value="Regular">Regular</label>
+          </div>
+        </div>
+        <div class="rq-field">
+          <label for="rq-region">Location</label>
+          <select id="rq-region" name="region">
+            <option value="" selected>Select region...</option>
+            <option value="Delhi NCR">Delhi NCR</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Other (Pan India)">Other (Pan India)</option>
+          </select>
+        </div>
+
+        <div class="rq-actions">
+          <button type="submit" class="bs-btn bs-btn-lime">Display quotes <svg viewBox="0 0 24 24"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <p class="rq-privacy">100% privacy guaranteed</p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="rq-steps">
+    <div class="rq-step reveal"><p class="n">01</p><h4>Response within 24 hours</h4><p>Our enterprise team reviews your requirement and reverts within one business day.</p></div>
+    <div class="rq-step reveal"><p class="n">02</p><h4>Pan-India reverse logistics</h4><p>We schedule secure pickup of your assets through our chain-of-custody transport network.</p></div>
+    <div class="rq-step reveal"><p class="n">03</p><h4>100% data security guaranteed</h4><p>Certified data destruction with serialized certificates issued for every batch.</p></div>
+  </div>
+
+  <div class="rq-loc">
+    <p class="pg-kicker" style="text-align:center">Find us</p>
+    <h2>Our strategic location</h2>
+    <p class="pg-body" style="text-align:center;max-width:64ch;margin-left:auto;margin-right:auto">Strategically positioned to manage high-volume enterprise logistics. Our Greater Noida facility combines large-scale processing capacity with operational efficiency, ensuring rapid, secure, and fully compliant material recovery for our partners across the region.</p>
+    <div class="rq-facility">
+      <h3>Greater Noida facility</h3>
+      <p class="k">Plant &amp; registered office</p>
+      <address class="addr">Plot No. 479, Habibpur, Main Dadri Road,<br>Greater Noida, Uttar Pradesh, 201306</address>
+      <div class="rows">
+        <span>Email&nbsp;&nbsp;<a href="mailto:hello@ecoforge.com">hello@ecoforge.com</a></span>
+        <span>Phone&nbsp;&nbsp;<a href="tel:+919319253708">+91 93192 53708</a></span>
+      </div>
+      <iframe class="rq-map" title="Map &mdash; Eco Forge Greater Noida facility" loading="lazy" src="https://www.google.com/maps?q=Plot%20479%20Habibpur%20Main%20Dadri%20Road%20Greater%20Noida&output=embed"></iframe>
+      <a class="rq-maplink" href="https://maps.google.com/maps?q=Plot%20479%20Habibpur%20Main%20Dadri%20Road%20Greater%20Noida" target="_blank" rel="noopener">Open in Maps &#8599;</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var icons = document.getElementById('rqIcons');
+  var solSel = document.getElementById('rq-solution');
+  icons.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-sol]');
+    if (!btn) return;
+    icons.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', b === btn); });
+    var v = btn.dataset.sol;
+    if (v === 'battery') v = 'others';
+    solSel.value = v;
+  });
+  document.getElementById('quoteForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var d = new FormData(this);
+    var sel = document.getElementById('rq-solution');
+    var solText = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].textContent : '';
+    var L = [];
+    L.push('Name: ' + (d.get('name') || '-'));
+    L.push('Phone: ' + (d.get('phone') || '-'));
+    L.push('Email: ' + (d.get('email') || '-'));
+    L.push('Company: ' + (d.get('company') || '-'));
+    L.push('Estimated volume (monthly): ' + ((d.get('volume') || '-') + ' ' + (d.get('unit') || '')).trim());
+    L.push('Solution: ' + solText);
+    L.push('Pickup frequency: ' + (d.get('frequency') || '-'));
+    L.push('Location: ' + (d.get('region') || '-'));
+    L.push('');
+    L.push('Query:');
+    L.push(d.get('query') || '');
+    window.location.href = 'mailto:hello@ecoforge.com?subject=' +
+      encodeURIComponent('Quote request - ' + solText) + '&body=' + encodeURIComponent(L.join('\n'));
+  });
+})();
+</script>
+</main>
+
+<footer class="bs-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="bs-brand" href="index.html" aria-label="Eco Forge — home">
+          <!-- TODO: REPLACE LOGO --><img src="assets/logo.png" alt="EcoForge" height="22">
+        </a>
+        <p class="about">Industrial-scale material recovery — certified IT asset disposition, green metal recovery and EPR compliance for enterprises across India.</p>
+        <div class="bs-socials">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.2 8h4.6v14.8H.2Zm7.6 0h4.4v2h.06c.6-1.14 2.1-2.34 4.34-2.34 4.64 0 5.5 3.06 5.5 7.04v8.1h-4.6v-7.18c0-1.72-.04-3.92-2.4-3.92-2.4 0-2.76 1.86-2.76 3.8v7.3H7.8Z"/></svg></a>
+          <a href="#" aria-label="Twitter / X"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.9 7.9L23.2 22h-6.4l-5-6.6L6 22H2.9l7.4-8.5L1.6 2h6.6l4.5 6L18.9 2Zm-1.1 18h1.8L6.9 3.8H5Z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4Zm5.2-9.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="business-solutions.html">Business Solutions</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="business-solutions.html#e-waste">E-Waste Management</a></li>
+          <li><a href="business-solutions.html#lithium">Lithium Battery Recycling</a></li>
+          <li><a href="business-solutions.html#plastic">Plastic Waste Recycling</a></li>
+          <li><a href="business-solutions.html#paper">Paper Recycling</a></li>
+          <li><a href="business-solutions.html#metal">Green Metal Recovery</a></li>
+          <li><a href="business-solutions.html#epr">PFAS Consulting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:hello@ecoforge.com">hello@ecoforge.com</a></li>
+          <li><a href="tel:+919319253708">+91 93192 53708</a></li>
+        </ul>
+        <address>479, Habibpur, Dadri,<br>Gr. Noida, Uttar Pradesh,<br>India</address>
+        <a class="lime" href="contact.html">Start Your Transition <svg viewBox="0 0 24 24"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="bs-legal">
+      <p>&copy; 2026 EcoForge Recyclers (P) Limited. All rights reserved.</p>
+      <p><a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms-conditions.html">Terms of Service</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

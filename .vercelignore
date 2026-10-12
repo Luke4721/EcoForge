@@ -1,0 +1,8 @@
+_src-models/
+*.py
+*.disabled
+sylva-hero.html
+sylva-hero.orig.html
+site-content.json
+site-content.md
+models-data.js.disabled
