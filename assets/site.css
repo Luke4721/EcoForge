@@ -430,3 +430,15 @@ html{overflow-x:clip}
   .rq-field .span2,.rq-field textarea{grid-column:auto}
   .rq-steps{grid-template-columns:1fr}
 }
+
+
+/* Executive Leadership Section */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;justify-content:center;margin-top:2.4rem}
+.team-card{background:#fff;border:1px solid rgba(18,53,39,.1);border-radius:20px;padding:2.4rem 1.8rem;text-align:center;box-shadow:0 10px 30px -10px rgba(18,53,39,.08);transition:transform .3s ease,box-shadow .3s ease}
+.team-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px -12px rgba(18,53,39,.16)}
+.team-initials{width:72px;height:72px;border-radius:50%;background:#E9F5EA;color:#14682F;border:2px solid #9BE8A6;display:flex;align-items:center;justify-content:center;margin:0 auto 1.4rem;font-family:'Fraunces',serif;font-weight:600;font-size:1.45rem;letter-spacing:.05em}
+.team-card h3{font-family:'Fraunces',serif;font-weight:600;color:#123527;font-size:1.35rem;line-height:1.3}
+.team-card .team-role{margin-top:.5rem;color:#2CA244;font-size:.9rem;font-weight:500;letter-spacing:.02em}
+@media (max-width:860px){
+  .team-grid{grid-template-columns:1fr;gap:1.4rem}
+}

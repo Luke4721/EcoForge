@@ -121,6 +121,8 @@
 
   /* ---- EcoForge prime dock (Sylva-consistent) ---- */
   @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap');
+  .site-header{position:absolute;top:0;left:0;width:100%;z-index:60;background:transparent;background-color:transparent;pointer-events:none}
+  .site-header .egdock{pointer-events:auto}
   .egdock{position:fixed;z-index:60;top:18px;left:50%;transform:translateX(-50%);
     display:flex;align-items:center;gap:4px;padding:5px;border-radius:14px;
     border:1px solid rgba(255,255,255,.11);
@@ -155,7 +157,7 @@
 
 
   /* ---------- hero (Observatory) ---------- */
-  #hero{background:#FBFBF8}
+  #hero{background:transparent}
   .obs-orb{position:absolute;border-radius:50%;filter:blur(110px);pointer-events:none}
   .orb-a{width:44vmax;height:44vmax;left:-10%;top:-14%;background:#2CA244;opacity:.20;animation:orbF 21s ease-in-out infinite alternate}
   .orb-b{width:52vmax;height:52vmax;right:-12%;top:16%;background:#0f9488;opacity:.16;animation:orbF 24s ease-in-out infinite alternate-reverse}
@@ -293,24 +295,27 @@
 
 <!-- ============ PRELOADER ============ -->
 <!-- ============ NAVIGATION HEADER ============ -->
-<header id="mainHeader" class="fixed top-0 inset-x-0 z-50 bg-[#FBFBF8]/95 backdrop-blur-md border-b border-[#14682F]/10">
-  <div class="max-w-[1440px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between gap-6">
-    <a href="index.html" class="flex items-center shrink-0" aria-label="EcoForge">
-      <img src="assets/logo.png" alt="EcoForge" class="h-10 md:h-12 w-auto object-contain">
-    </a>
-
-    <nav class="hidden md:flex items-center gap-7 lg:gap-10" aria-label="Primary Navigation">
-      <a href="business-solutions.html" class="text-xs font-semibold tracking-[0.14em] uppercase text-[#123527]/80 hover:text-[#2CA244] transition">Business Solutions</a>
-      <a href="sustainability.html" class="text-xs font-semibold tracking-[0.14em] uppercase text-[#123527]/80 hover:text-[#2CA244] transition">Sustainability</a>
-      <a href="about-us.html" class="text-xs font-semibold tracking-[0.14em] uppercase text-[#123527]/80 hover:text-[#2CA244] transition">About Us</a>
-      <a href="careers.html" class="text-xs font-semibold tracking-[0.14em] uppercase text-[#123527]/80 hover:text-[#2CA244] transition">Careers</a>
-    </nav>
-
-    <div class="flex items-center gap-4">
-      <a href="contact.html" class="display uppercase text-[11px] tracking-[0.16em] bg-[#123527] text-white px-6 py-3 rounded-full hover:bg-[#2CA244] transition shadow-md hover:shadow-lg">Request a Quote</a>
-    </div>
-  </div>
-</header>
+<header class="site-header">
+<nav id="egDock" class="egdock hide" aria-label="Eco Forge primary">
+  <a class="eg-item eg-mark" href="/" aria-label="Eco Forge — home">
+    <!-- TODO: REPLACE LOGO --><img src="assets/logo-mark.png" alt="" width="22" height="16">
+  </a>
+  <a class="eg-item" href="business-solutions.html">
+    <span class="g"><svg viewBox="0 0 16 16"><path d="M4 2.4h5.3L12 5.1v8.5H4z"/><path d="M9.2 2.4V5h2.7"/><path d="M6 8.4h4M6 10.8h2.8"/></svg></span>
+    <span class="l">Business solutions</span></a>
+  <a class="eg-item" href="sustainability.html">
+    <span class="g"><svg viewBox="0 0 16 16"><path d="M8 14V9"/><path d="M8 9c0-2.4 1.7-4.3 4-4.3.2 2.6-1.6 4.6-4 4.3Z"/><path d="M8 10.5C7.9 8.4 6.4 6.8 4.4 6.8 4.3 8.9 5.9 10.6 8 10.5Z"/></svg></span>
+    <span class="l">Sustainability</span></a>
+  <a class="eg-item" href="about-us.html">
+    <span class="g"><svg viewBox="0 0 16 16"><path d="M1.6 12.4c2.4-3.4 4.3-5.1 5.7-5.1 2 0 3 3.6 5 3.6 1.1 0 1.9-.5 2.4-1.4"/><path d="M4.3 6.2C5.5 4.4 6.6 3.5 7.6 3.5c1.5 0 2.2 2.4 3.7 2.4"/></svg></span>
+    <span class="l">About us</span></a>
+  <a class="eg-item" href="careers.html">
+    <span class="g"><svg viewBox="0 0 16 16"><circle cx="8" cy="5.4" r="2.4"/><path d="M2.8 13.6c.6-3 2.6-4.6 5.2-4.6s4.6 1.6 5.2 4.6"/></svg></span>
+    <span class="l">Careers</span></a>
+  <a class="eg-item eg-enter" href="contact.html">
+    <span class="g"><svg viewBox="0 0 16 16"><path d="M6.6 2.5h5.1a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6.6"/><path d="M2.6 8h6.6"/><path d="m7 5.6 2.4 2.4L7 10.4"/></svg></span>
+    <span class="l">Request a Quote</span></a>
+</nav>
 
 <div id="preCurtain"></div>
 <div id="preMain">
@@ -342,7 +347,7 @@
 <!-- ================================================================
      HERO · The Specimen Dish — devices reborn in nature (verbatim metrics)
      ================================================================ -->
-<section id="hero" class="relative min-h-screen bg-[#FBFBF8] overflow-hidden flex flex-col justify-between pt-20">
+<section id="hero" class="relative min-h-screen bg-transparent overflow-hidden flex flex-col justify-between">
   <div class="relative flex-1 flex flex-col justify-between hero-scene">
     <div class="hero-in flex-1">
       <div class="hero-copy">
@@ -779,9 +784,9 @@
       <path class="wave" style="animation-delay:.6s" d="M4 30c5 0 5-5 10-5s5 5 10 5 5-5 10-5 5 5 10 5"/>
     </svg>
     <h2 class="serif text-5xl md:text-6xl leading-tight">Be part of<br>the loop.</h2>
-    <a href="mailto:hello@ecoforge.com" class="inline-block mt-10 bg-[#08130C] text-white text-xs tracking-[0.25em] uppercase px-12 py-5 rounded-full hover:scale-105 transition shadow-xl">Start a pickup</a>
-    <p class="mt-6 text-white/70 text-sm"><a href="tel:+919319253708" class="underline hover:text-white">+91 93192 53708</a> · <a href="mailto:hello@ecoforge.com" class="underline hover:text-white">hello@ecoforge.com</a><br>
-    <span class="text-white/50 text-xs">EcoForge Recyclers (P) Ltd · Plot 479, Habibpur, Dadri Road, Greater Noida 201306</span></p>
+    <a href="mailto:vipin@ecoforgerecycling.com" class="inline-block mt-10 bg-[#08130C] text-white text-xs tracking-[0.25em] uppercase px-12 py-5 rounded-full hover:scale-105 transition shadow-xl">Start a pickup</a>
+    <p class="mt-6 text-white/70 text-sm"><a href="tel:+919159356199" class="underline hover:text-white">+91 91593 56199</a> · <a href="mailto:vipin@ecoforgerecycling.com" class="underline hover:text-white">vipin@ecoforgerecycling.com</a><br>
+    <span class="text-white/50 text-xs">EcoForge Recyclers (P) Ltd · Khasra No. 109, Namoli, Knowledge Park 3, Greater Noida, Gautam Buddha Nagar, Uttar Pradesh 201306</span></p>
     <p class="mt-12 text-white/70 text-sm">© 2026 EcoForge · ecoforge.com <!-- TODO: Confirm new domain (currently ecoforge.com) --><br>
       <span class="text-white/50 text-xs">Hero based on ThreeUI “Sylva — Living Green” (MIT) · threeui.com · 3D models by their CC0/CC-BY authors</span></p>
   </section>
@@ -818,9 +823,9 @@
       <div>
         <p class="text-xs tracking-[0.2em] uppercase mb-4" style="color:#6f8577">Get in touch</p>
         <ul class="space-y-2 text-sm">
-          <li><a href="mailto:hello@ecoforge.com" class="hover:text-white transition">hello@ecoforge.com</a></li>
-          <li><a href="tel:+919319253708" class="hover:text-white transition">+91 93192 53708</a></li>
-          <li style="color:#a8bdae">479, Habibpur, Dadri,<br>Gr. Noida, Uttar Pradesh</li>
+          <li><a href="mailto:vipin@ecoforgerecycling.com" class="hover:text-white transition">vipin@ecoforgerecycling.com</a></li>
+          <li><a href="tel:+919159356199" class="hover:text-white transition">+91 91593 56199</a></li>
+          <li style="color:#a8bdae">Khasra No. 109, Namoli, Knowledge Park 3,<br>Greater Noida, Gautam Buddha Nagar,<br>Uttar Pradesh 201306</li>
         </ul>
         <a href="contact.html" class="inline-block mt-5 text-xs tracking-[0.2em] uppercase px-6 py-3 rounded-full transition hover:scale-105" style="background:#45C74E;color:#08130C">Start your transition</a>
       </div>
@@ -1642,8 +1647,11 @@ if (!reduce){
   vis(); addEventListener('scroll', vis, {passive:true});
   dock.addEventListener('click', e => {
     const a = e.target.closest('a'); if (!a) return;
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+    const href = a.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const t = document.querySelector(href);
+      if (t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+    }
   });
   const setSec = id => dock.querySelectorAll('.eg-item').forEach(a =>
     a.classList.toggle('on', a.dataset.sec === id));
