@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /ecoforge.html
+Disallow: /sylva-hero
+
+Sitemap: https://www.ecoforgerecycling.com/sitemap.xml
